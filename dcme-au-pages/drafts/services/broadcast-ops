@@ -1,0 +1,2760 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Broadcast Operations Services | RadioTrafficAU</title>
+
+<meta name="description" content="Professional broadcast operations support for Australian radio stations. Traffic management, airtime scheduling, compliance, RCS Aquira support and industry consulting.">
+
+<style>
+
+/* ==========================
+   GLOBAL STYLES
+========================== */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:#080d18;
+    color:#d8dee9;
+    line-height:1.7;
+}
+
+.container {
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+section {
+    padding:100px 0;
+}
+
+h1,h2,h3,h4 {
+    color:#ffffff;
+    line-height:1.2;
+}
+
+h1 {
+    font-size:clamp(2.8rem,5vw,4.8rem);
+}
+
+h2 {
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:25px;
+}
+
+h3 {
+    font-size:1.4rem;
+    margin-bottom:15px;
+}
+
+p {
+    color:#b7c1d1;
+    margin-bottom:20px;
+}
+
+a {
+    text-decoration:none;
+}
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn {
+
+    display:inline-block;
+
+    padding:16px 35px;
+
+    border-radius:8px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.btn-primary {
+
+    background:#008cff;
+
+    color:white;
+
+    box-shadow:
+    0 10px 35px rgba(0,140,255,.35);
+
+}
+
+
+.btn-primary:hover {
+
+    transform:translateY(-3px);
+
+    background:#2ba3ff;
+
+}
+
+
+.btn-outline {
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:white;
+
+    margin-left:15px;
+
+}
+
+
+.btn-outline:hover {
+
+    background:white;
+
+    color:#080d18;
+
+}
+
+
+
+/* ==========================
+   HERO
+========================== */
+
+
+.hero {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(0,140,255,.25),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #050912,
+        #101b33
+    );
+
+}
+
+
+.hero::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.03) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.03) 1px,
+        transparent 1px
+    );
+
+    background-size:
+    50px 50px;
+
+}
+
+
+.hero-content {
+
+    position:relative;
+
+    max-width:850px;
+
+}
+
+
+.hero-label {
+
+    display:inline-block;
+
+    background:
+    rgba(0,140,255,.15);
+
+    border:
+    1px solid rgba(0,140,255,.4);
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    color:#53b5ff;
+
+    font-size:.9rem;
+
+    margin-bottom:30px;
+
+}
+
+
+.hero h1 span {
+
+    color:#008cff;
+
+}
+
+
+.hero p {
+
+    font-size:1.25rem;
+
+    max-width:750px;
+
+    margin:30px 0;
+
+}
+
+
+.hero-stats {
+
+    display:flex;
+
+    gap:50px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.stat h3 {
+
+    font-size:2rem;
+
+    color:white;
+
+}
+
+
+.stat p {
+
+    font-size:.9rem;
+
+    margin:0;
+
+}
+
+
+
+/* ==========================
+   TRUST BAR
+========================== */
+
+
+.trust {
+
+    background:#0d1525;
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+.trust-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+    text-align:center;
+
+}
+
+
+.trust-item {
+
+    padding:25px;
+
+}
+
+
+.trust-item strong {
+
+    color:white;
+
+    display:block;
+
+    font-size:1.1rem;
+
+}
+
+
+.trust-item span {
+
+    color:#008cff;
+
+    font-size:.85rem;
+
+}
+
+
+
+/* ==========================
+   SECTION HEADINGS
+========================== */
+
+
+.section-heading {
+
+    max-width:750px;
+
+    margin-bottom:60px;
+
+}
+
+
+.section-heading p {
+
+    font-size:1.1rem;
+
+}
+
+
+
+/* ==========================
+   PROBLEM SECTION
+========================== */
+
+
+.problem-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+
+.problem-card {
+
+    background:#101827;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+.problem-card h3 {
+
+    color:#ff7070;
+
+}
+
+
+.problem-card li {
+
+    margin-bottom:10px;
+
+    color:#c7d0dd;
+
+}
+
+
+
+/* ==========================
+   SOLUTION
+========================== */
+
+
+.solution {
+
+    background:
+    linear-gradient(
+    135deg,
+    #07101e,
+    #0d203d
+    );
+
+}
+
+
+.solution-box {
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    padding:45px;
+
+    border-radius:20px;
+
+}
+
+
+.solution-box strong {
+
+    color:#008cff;
+
+}
+
+
+
+/* ==========================
+   SERVICES
+========================== */
+
+
+.services-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+.service-card {
+
+    background:#101827;
+
+    padding:40px 30px;
+
+    border-radius:15px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+
+.service-card:hover {
+
+    transform:translateY(-8px);
+
+    border-color:#008cff;
+
+}
+
+
+.service-icon {
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+
+.service-card ul {
+
+    margin-top:20px;
+
+    padding-left:20px;
+
+}
+
+
+.service-card li {
+
+    color:#bcc7d8;
+
+    margin-bottom:8px;
+
+}
+
+
+/* ==========================
+   INDUSTRIES
+========================== */
+
+
+.industry-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+.industry {
+
+    background:#0d1525;
+
+    padding:30px;
+
+    border-radius:12px;
+
+}
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+
+@media(max-width:768px){
+
+.hero {
+
+    min-height:auto;
+
+    padding:120px 0;
+
+}
+
+
+.hero-stats {
+
+    gap:25px;
+
+}
+
+
+.btn-outline {
+
+    margin-left:0;
+
+    margin-top:15px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================
+ HERO
+========================== -->
+
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+
+<div class="hero-label">
+
+Broadcast Operations Services
+
+</div>
+
+
+<h1>
+
+The operational expertise behind Australia's independent broadcasters.
+
+</h1>
+
+
+<p>
+
+RadioTrafficAU provides professional broadcast operations support for community, Indigenous, regional and independent radio stations.
+
+We help broadcasters improve efficiency, protect revenue, maintain compliance and operate with the confidence of a major network.
+
+</p>
+
+
+<a href="#" class="btn btn-primary">
+Book a Station Review
+</a>
+
+
+<a href="#" class="btn btn-outline">
+Explore Services
+</a>
+
+
+<div class="hero-stats">
+
+
+<div class="stat">
+
+<h3>5+</h3>
+
+<p>
+Major Australian media organisations supported
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>15+</h3>
+
+<p>
+Years of combined broadcast experience
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>100%</h3>
+
+<p>
+Australian owned and operated
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</header>
+
+
+
+
+
+<!-- ==========================
+ TRUST
+========================== -->
+
+
+<section class="trust">
+
+<div class="container">
+
+
+<div class="trust-grid">
+
+
+<div class="trust-item">
+
+<strong>
+Southern Cross Austereo
+</strong>
+
+<span>
+Commercial Network Experience
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+ARN
+</strong>
+
+<span>
+Broadcast Operations Experience
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+Nova Entertainment
+</strong>
+
+<span>
+Network Workflow Knowledge
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+ACE Radio
+</strong>
+
+<span>
+Regional Broadcasting Experience
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+Community Broadcasters
+</strong>
+
+<span>
+Independent Station Support
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ PROBLEM
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+
+<h2>
+
+Running a radio station is complicated.
+
+</h2>
+
+
+<p>
+
+Your team should be focused on creating great content and connecting with listeners.
+
+But behind every successful station is a complex operational machine.
+
+</p>
+
+
+</div>
+
+
+
+<div class="problem-grid">
+
+
+<div class="problem-card">
+
+<h3>
+Common challenges
+</h3>
+
+
+<ul>
+
+<li>
+Limited operational resources
+</li>
+
+<li>
+Staff managing too many responsibilities
+</li>
+
+<li>
+Traffic processes that rely on one person
+</li>
+
+<li>
+Missed commercial opportunities
+</li>
+
+<li>
+Compliance uncertainty
+</li>
+
+<li>
+No documented workflows
+</li>
+
+</ul>
+
+
+</div>
+
+
+<div class="problem-card">
+
+<h3>
+The impact
+</h3>
+
+
+<ul>
+
+<li>
+Lost revenue
+</li>
+
+<li>
+Advertiser frustration
+</li>
+
+<li>
+Increased staff pressure
+</li>
+
+<li>
+Operational mistakes
+</li>
+
+<li>
+Reduced efficiency
+</li>
+
+<li>
+Difficulty scaling
+</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ==========================
+ SOLUTION POSITIONING
+========================== -->
+
+
+<section class="solution">
+
+<div class="container">
+
+
+<div class="solution-box">
+
+
+<h2>
+Major network capability. Independent broadcaster flexibility.
+</h2>
+
+
+<p>
+
+Large media organisations have dedicated traffic teams, operational specialists and established workflows.
+
+Independent broadcasters often do not have the resources to build that same level of operational support internally.
+
+<strong>
+RadioTrafficAU bridges that gap.
+</strong>
+
+</p>
+
+
+<p>
+
+We bring professional broadcast operations experience directly to your station, helping you streamline processes, improve compliance and get more value from your existing systems.
+
+</p>
+
+
+<p>
+
+Think of us as an extension of your team, providing the expertise you need when you need it.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ SERVICES
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Broadcast Operations Services
+</h2>
+
+
+<p>
+
+From daily traffic management to operational consulting, RadioTrafficAU provides the support required to keep your station running smoothly.
+
+</p>
+
+
+</div>
+
+
+
+<div class="services-grid">
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+📻
+</div>
+
+
+<h3>
+Traffic Management
+</h3>
+
+
+<p>
+
+Professional airtime scheduling and campaign management that protects your station's commercial inventory.
+
+</p>
+
+
+<ul>
+
+<li>
+Campaign setup and management
+</li>
+
+<li>
+Spot scheduling
+</li>
+
+<li>
+Commercial placement optimisation
+</li>
+
+<li>
+Sponsorship scheduling
+</li>
+
+<li>
+Promo management
+</li>
+
+<li>
+Makegood coordination
+</li>
+
+<li>
+Campaign reconciliation
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+📈
+</div>
+
+
+<h3>
+Inventory & Revenue Management
+</h3>
+
+
+<p>
+
+Your airtime is one of your station's most valuable assets.
+
+We help ensure every available opportunity is being managed effectively.
+
+</p>
+
+
+<ul>
+
+<li>
+Inventory reviews
+</li>
+
+<li>
+Spot utilisation analysis
+</li>
+
+<li>
+Commercial workflow improvements
+</li>
+
+<li>
+Sales team support
+</li>
+
+<li>
+Revenue protection processes
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+✅
+</div>
+
+
+<h3>
+Broadcast Compliance
+</h3>
+
+
+<p>
+
+Reduce risk and operate with confidence through professional operational processes.
+
+</p>
+
+
+<ul>
+
+<li>
+Commercial separation checks
+</li>
+
+<li>
+Sponsorship compliance
+</li>
+
+<li>
+Spot classification management
+</li>
+
+<li>
+Campaign accuracy checks
+</li>
+
+<li>
+Operational documentation
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+⚙️
+</div>
+
+
+<h3>
+RCS Aquira Support
+</h3>
+
+
+<p>
+
+Get more from your traffic system with support from someone who understands the platform.
+
+</p>
+
+
+<ul>
+
+<li>
+Aquira workflow optimisation
+</li>
+
+<li>
+User training
+</li>
+
+<li>
+System configuration advice
+</li>
+
+<li>
+Database organisation
+</li>
+
+<li>
+Reporting improvements
+</li>
+
+<li>
+Best practice guidance
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+🎙️
+</div>
+
+
+<h3>
+Operational Consulting
+</h3>
+
+
+<p>
+
+Practical advice based on real broadcast experience, not theory.
+
+</p>
+
+
+<ul>
+
+<li>
+Station workflow reviews
+</li>
+
+<li>
+Department structure advice
+</li>
+
+<li>
+Process improvements
+</li>
+
+<li>
+Technology recommendations
+</li>
+
+<li>
+Staff training
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+🛠️
+</div>
+
+
+<h3>
+Operational Backup
+</h3>
+
+
+<p>
+
+Additional support when your team needs extra capacity.
+
+</p>
+
+
+<ul>
+
+<li>
+Staff leave coverage
+</li>
+
+<li>
+Busy campaign support
+</li>
+
+<li>
+System transitions
+</li>
+
+<li>
+Emergency operational assistance
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ INDUSTRY EXPERIENCE
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+
+<h2>
+
+Experience from across Australian broadcasting
+
+</h2>
+
+
+<p>
+
+RadioTrafficAU is built on practical experience inside the broadcast industry.
+
+We understand the pressures stations face because we have worked through them.
+
+</p>
+
+
+</div>
+
+
+
+<div class="industry-grid">
+
+
+
+<div class="industry">
+
+<h3>
+Commercial Radio
+</h3>
+
+
+<p>
+
+Experience working with large-scale commercial radio environments, where accuracy, deadlines and revenue delivery are critical.
+
+</p>
+
+</div>
+
+
+
+
+<div class="industry">
+
+<h3>
+Community Broadcasting
+</h3>
+
+
+<p>
+
+Flexible support designed around volunteer teams, limited resources and community-focused operations.
+
+</p>
+
+</div>
+
+
+
+
+<div class="industry">
+
+<h3>
+Indigenous Broadcasting
+</h3>
+
+
+<p>
+
+Understanding the unique operational requirements of Indigenous broadcasters and community media organisations.
+
+</p>
+
+</div>
+
+
+
+
+<div class="industry">
+
+<h3>
+Regional Radio
+</h3>
+
+
+<p>
+
+Supporting regional stations that need professional systems without metropolitan overheads.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ EXPERTISE SECTION
+========================== -->
+
+
+<section class="solution">
+
+
+<div class="container">
+
+
+<div class="solution-box">
+
+
+<h2>
+
+More than scheduling. We understand broadcasting.
+
+</h2>
+
+
+<p>
+
+Many providers can move items around a schedule.
+
+Very few understand how those decisions impact programming, sales, production, compliance and revenue.
+
+</p>
+
+
+<p>
+
+Our experience working with Australia's leading broadcasters means we understand the bigger picture.
+
+</p>
+
+
+<ul>
+
+
+<li>
+How sales teams need campaigns delivered
+</li>
+
+
+<li>
+How programming priorities affect commercial placement
+</li>
+
+
+<li>
+How production workflows impact deadlines
+</li>
+
+
+<li>
+How technology choices affect station efficiency
+</li>
+
+
+<li>
+How small operational improvements create major results
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ AQUiRA AUTHORITY
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+
+RCS Aquira specialists
+
+</h2>
+
+
+<p>
+
+Your broadcast systems should empower your team, not create additional workload.
+
+</p>
+
+</div>
+
+
+
+<div class="solution-box">
+
+
+<p>
+
+With experience implementing, supporting and training teams on RCS Aquira, RadioTrafficAU provides practical system expertise built around real-world broadcast workflows.
+
+</p>
+
+
+<p>
+
+We help stations improve how they use their systems, not simply maintain them.
+
+</p>
+
+
+<ul>
+
+<li>
+Improve traffic workflows
+</li>
+
+<li>
+Train new and existing staff
+</li>
+
+<li>
+Review scheduling processes
+</li>
+
+<li>
+Identify operational efficiencies
+</li>
+
+<li>
+Create consistent station procedures
+</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ==========================
+ WHY OUTSOURCE
+========================== -->
+
+
+<section class="solution">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Why outsource your broadcast operations?
+</h2>
+
+
+<p>
+
+Access experienced broadcast professionals without the cost and complexity of building a full internal operations department.
+
+</p>
+
+
+</div>
+
+
+
+<div class="problem-grid">
+
+
+
+<div class="problem-card">
+
+<h3>
+Hiring internally
+</h3>
+
+
+<ul>
+
+<li>
+High salary costs
+</li>
+
+<li>
+Recruitment challenges
+</li>
+
+<li>
+Training requirements
+</li>
+
+<li>
+Limited coverage during leave
+</li>
+
+<li>
+Knowledge can leave with one person
+</li>
+
+<li>
+Additional management overhead
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🚀
+</div>
+
+
+<h3>
+Partnering with RadioTrafficAU
+</h3>
+
+
+<ul>
+
+<li>
+Immediate access to industry experience
+</li>
+
+<li>
+Flexible support based on your needs
+</li>
+
+<li>
+No recruitment or onboarding costs
+</li>
+
+<li>
+Established broadcast workflows
+</li>
+
+<li>
+Independent operational advice
+</li>
+
+<li>
+Support when your team needs it most
+</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ VALUE PROPOSITION
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+
+<h2>
+
+Your station gets bigger network capability, without the big network cost.
+
+</h2>
+
+
+<p>
+
+RadioTrafficAU provides smaller broadcasters with access to knowledge and systems normally only available to major media organisations.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+
+<h3>
+Operational confidence
+</h3>
+
+
+<p>
+
+Know that your station processes are being handled by someone who understands broadcast requirements.
+
+</p>
+
+
+</div>
+
+
+
+<div class="service-card">
+
+
+<h3>
+More time for your team
+</h3>
+
+
+<p>
+
+Remove administrative pressure so your presenters, producers and managers can focus on creating great radio.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<h3>
+Better advertiser service
+</h3>
+
+
+<p>
+
+Improve campaign delivery, accuracy and reliability for your commercial partners.
+
+</p>
+
+
+</div>
+
+
+
+<div class="service-card">
+
+
+<h3>
+Future-ready systems
+</h3>
+
+
+<p>
+
+Create workflows that allow your station to grow without operational bottlenecks.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ SUPPORT MODELS
+========================== -->
+
+
+<section class="solution">
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+
+<h2>
+
+Flexible support options
+
+</h2>
+
+
+<p>
+
+Every broadcaster operates differently. Choose the level of support that works for your station.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="services-grid">
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+📅
+</div>
+
+
+<h3>
+Ongoing Operations Support
+</h3>
+
+
+<p>
+
+A dedicated operational partner managing regular broadcast workflows.
+
+</p>
+
+
+<ul>
+
+<li>
+Daily traffic assistance
+</li>
+
+<li>
+Scheduling support
+</li>
+
+<li>
+Campaign management
+</li>
+
+<li>
+Regular operational reviews
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+🔄
+</div>
+
+
+<h3>
+Flexible Backup Support
+</h3>
+
+
+<p>
+
+Additional support when your team needs extra capacity.
+
+</p>
+
+
+<ul>
+
+<li>
+Staff leave coverage
+</li>
+
+<li>
+Large campaign support
+</li>
+
+<li>
+Peak workload assistance
+</li>
+
+<li>
+Operational emergencies
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+🎓
+</div>
+
+
+<h3>
+Consulting & Training
+</h3>
+
+
+<p>
+
+Improve your internal systems with expert advice.
+
+</p>
+
+
+<ul>
+
+<li>
+Workflow reviews
+</li>
+
+<li>
+Staff training
+</li>
+
+<li>
+System optimisation
+</li>
+
+<li>
+Process documentation
+</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ PROCESS
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+
+<h2>
+
+How we work with your station
+
+</h2>
+
+
+<p>
+
+A simple process designed to understand your needs and deliver practical improvements.
+
+</p>
+
+
+</div>
+
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+1
+</div>
+
+
+<h3>
+Station Review
+</h3>
+
+
+<p>
+
+We learn about your current systems, challenges and operational goals.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+2
+</div>
+
+
+<h3>
+Identify Opportunities
+</h3>
+
+
+<p>
+
+We review workflows and identify improvements that save time and reduce risk.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+3
+</div>
+
+
+<h3>
+Implement Support
+</h3>
+
+
+<p>
+
+We integrate into your station workflow with minimal disruption.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+4
+</div>
+
+
+<h3>
+Continuous Improvement
+</h3>
+
+
+<p>
+
+We continue refining processes as your station evolves.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ INDUSTRY CREDIBILITY
+========================== -->
+
+
+<section class="solution">
+
+
+<div class="container">
+
+
+<div class="solution-box">
+
+
+<h2>
+
+Built by broadcasters, for broadcasters.
+
+</h2>
+
+
+<p>
+
+RadioTrafficAU was created because independent broadcasters deserve access to the same operational knowledge and professionalism available inside Australia's largest media companies.
+
+</p>
+
+
+<p>
+
+Our approach combines technical expertise, broadcast systems knowledge and practical experience to deliver support that actually works in the real world.
+
+</p>
+
+
+<p>
+
+We don't just tell you what should happen.
+
+We help make it happen.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ TESTIMONIAL PLACEHOLDER
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+
+<h2>
+
+Trusted by broadcasters who value professional operations
+
+</h2>
+
+
+<p>
+
+Add client testimonials here from community, Indigenous and independent broadcasters.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+
+<p>
+
+"RadioTrafficAU helped us improve our workflow and gave our team confidence that our commercial operations were being handled professionally."
+
+</p>
+
+
+<h3>
+Station Manager
+</h3>
+
+
+</div>
+
+
+
+
+<div class="service-card">
+
+
+<p>
+
+"Having access to someone with major network experience has helped us improve processes we previously struggled with."
+
+</p>
+
+
+<h3>
+Operations Manager
+</h3>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ==========================
+ FAQ
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+
+<p>
+
+Common questions from broadcasters considering operational support.
+
+</p>
+
+</div>
+
+
+
+<div class="faq">
+
+
+<details>
+
+<summary>
+Do you only work with large radio stations?
+</summary>
+
+
+<p>
+
+No. RadioTrafficAU specialises in supporting small, community, Indigenous, regional and independent broadcasters.
+
+Our goal is to provide professional broadcast operations support at a scale that works for your station.
+
+</p>
+
+
+</details>
+
+
+
+
+<details>
+
+<summary>
+Can you work with our existing staff?
+</summary>
+
+
+<p>
+
+Absolutely.
+
+We can complement your current team, provide additional capacity during busy periods or manage specific operational responsibilities.
+
+</p>
+
+
+</details>
+
+
+
+
+<details>
+
+<summary>
+Do you replace our current broadcast systems?
+</summary>
+
+
+<p>
+
+No.
+
+We work with your existing systems and help you get more value from the tools you already use.
+
+This includes support for RCS Aquira environments and established broadcast workflows.
+
+</p>
+
+
+</details>
+
+
+
+
+<details>
+
+<summary>
+Can you provide support remotely?
+</summary>
+
+
+<p>
+
+Yes.
+
+RadioTrafficAU is designed to support broadcasters anywhere across Australia through secure remote workflows.
+
+</p>
+
+
+</details>
+
+
+
+
+<details>
+
+<summary>
+Can you help improve our station processes?
+</summary>
+
+
+<p>
+
+Yes.
+
+We can review your current workflows, identify opportunities and provide practical recommendations based on real broadcast experience.
+
+</p>
+
+
+</details>
+
+
+
+
+<details>
+
+<summary>
+Do you provide training for volunteers and staff?
+</summary>
+
+
+<p>
+
+Yes.
+
+We provide practical training designed around real station operations, helping your team understand systems and processes with confidence.
+
+</p>
+
+
+</details>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ FINAL CTA
+========================== -->
+
+
+<section class="cta">
+
+
+<div class="container">
+
+
+<h2>
+
+Your station deserves professional operations support.
+
+</h2>
+
+
+<p>
+
+Whether you need help managing daily traffic, improving compliance, optimising your systems or simply having an experienced industry professional available when you need them, RadioTrafficAU can help.
+
+</p>
+
+
+<p>
+
+Focus on creating great radio.
+
+We'll help manage everything behind the scenes.
+
+</p>
+
+
+<a href="#" class="btn btn-primary">
+
+Book Your Free Station Consultation
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ CONTACT
+========================== -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="solution-box">
+
+
+<h2>
+
+Let's discuss your station's needs.
+
+</h2>
+
+
+<p>
+
+Every broadcaster has different challenges.
+
+We'll take the time to understand your current operations and identify where we can provide value.
+
+</p>
+
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+
+<h3>
+Email
+</h3>
+
+
+<p>
+operations@radiotrafficau.com.au
+</p>
+
+
+</div>
+
+
+
+<div class="service-card">
+
+
+<h3>
+Website
+</h3>
+
+
+<p>
+www.radiotrafficau.com.au
+</p>
+
+
+</div>
+
+
+
+<div class="service-card">
+
+
+<h3>
+Support Availability
+</h3>
+
+
+<p>
+Australia-wide remote support
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ FOOTER
+========================== -->
+
+
+<footer>
+
+
+<div class="container">
+
+
+<h3>
+RadioTrafficAU
+</h3>
+
+
+<p>
+
+Professional Broadcast Operations Services
+
+</p>
+
+
+<p>
+
+Helping Australian broadcasters operate better through experience, systems and practical industry knowledge.
+
+</p>
+
+
+<hr style="
+margin:30px 0;
+border:none;
+border-top:1px solid rgba(255,255,255,.1);
+">
+
+
+<p>
+
+© 2026 RadioTrafficAU. A service by DC Media & Entertainment.
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+<!-- ==========================
+ SIMPLE ANIMATION SCRIPT
+========================== -->
+
+
+<script>
+
+
+const cards =
+document.querySelectorAll(
+'.service-card, .problem-card, .industry'
+);
+
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+
+}
+
+
+});
+
+
+},
+{
+threshold:.15
+}
+);
+
+
+
+cards.forEach(card=>{
+
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition=
+"all .7s ease";
+
+
+observer.observe(card);
+
+
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>

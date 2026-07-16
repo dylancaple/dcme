@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Design, Development & Hosting | DC Media & Entertainment</title>
+
+<meta name="description" content="Professional website design, development and managed hosting for Australian small and medium businesses. Build your online presence with DC Media & Entertainment.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.7;
+    color:#333;
+    background:#f7f8fa;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+h1,h2,h3{
+    color:#1f2937;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:3rem;
+}
+
+h2{
+    font-size:2.2rem;
+}
+
+h3{
+    font-size:1.3rem;
+}
+
+p{
+    margin-bottom:20px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#003366,#0066cc);
+    color:white;
+    padding:120px 0;
+}
+
+.hero h1,
+.hero p{
+    color:white;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+}
+
+.button{
+    display:inline-block;
+    background:#fff;
+    color:#0057b8;
+    text-decoration:none;
+    padding:16px 32px;
+    border-radius:6px;
+    font-weight:bold;
+    margin-top:20px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#f0f0f0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:35px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card ul{
+    margin-left:20px;
+}
+
+.highlight{
+    background:#0057b8;
+    color:white;
+}
+
+.highlight h2,
+.highlight h3,
+.highlight p,
+.highlight li{
+    color:white;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    border-top:5px solid #0057b8;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.step span{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:50%;
+    background:#0057b8;
+    color:white;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.faq details{
+    background:white;
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.cta{
+    background:#111827;
+    color:white;
+    text-align:center;
+}
+
+.cta h2,
+.cta p{
+    color:white;
+}
+
+footer{
+    background:#1f2937;
+    color:#ddd;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero{
+    padding:80px 0;
+}
+
+h1{
+    font-size:2.2rem;
+}
+
+h2{
+    font-size:1.8rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+<div class="container">
+
+<h1>Professional Website Design, Development & Hosting</h1>
+
+<p>
+Your website is more than an online brochure. It's your digital storefront, your salesperson, and often your customer's first impression.
+DC Media & Entertainment builds modern, high-performing websites that help Australian businesses generate more enquiries, increase sales and grow online.
+</p>
+
+<a href="#" class="button">Request a Free Consultation</a>
+
+</div>
+</header>
+
+<section>
+
+<div class="container">
+
+<h2>Why Choose DC Media & Entertainment?</h2>
+
+<p>
+We don't just build websites that look great. We build websites designed to grow your business. Every project combines modern design, fast performance, excellent user experience and ongoing support so your investment continues delivering value long after launch.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<h3>Business Focused</h3>
+<p>Every website is designed with one goal in mind. Helping convert visitors into customers.</p>
+</div>
+
+<div class="feature">
+<h3>Australian Support</h3>
+<p>Speak directly with the people building your website whenever you need assistance.</p>
+</div>
+
+<div class="feature">
+<h3>Fast & Responsive</h3>
+<p>Optimised for speed across desktop, tablet and mobile devices.</p>
+</div>
+
+<div class="feature">
+<h3>Secure Hosting</h3>
+<p>Daily backups, SSL certificates, malware protection and proactive monitoring.</p>
+</div>
+
+<div class="feature">
+<h3>SEO Ready</h3>
+<p>Built using search engine best practices to give your business the strongest foundation.</p>
+</div>
+
+<div class="feature">
+<h3>Everything Included</h3>
+<p>Website design, hosting, maintenance, support and domain management all in one place.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="highlight">
+
+<div class="container">
+
+<h2>Website Solutions</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Business Websites</h3>
+<p>Professional websites for service businesses, trades, consultants, health providers and local organisations.</p>
+
+<ul>
+<li>Professional design</li>
+<li>Contact forms</li>
+<li>Google Maps</li>
+<li>Testimonials</li>
+<li>SEO ready</li>
+<li>Mobile responsive</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>eCommerce Stores</h3>
+
+<p>Sell products online with confidence using a secure and scalable online store.</p>
+
+<ul>
+<li>Online payments</li>
+<li>Inventory management</li>
+<li>Shipping options</li>
+<li>Gift vouchers</li>
+<li>Product reviews</li>
+<li>Sales reporting</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Portfolio Websites</h3>
+
+<p>Perfect for creatives, photographers, builders, architects and professionals wanting to showcase their work.</p>
+
+<ul>
+<li>Project galleries</li>
+<li>Image optimisation</li>
+<li>Video integration</li>
+<li>Case studies</li>
+<li>Lead generation</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Booking Websites</h3>
+
+<p>Allow customers to book appointments online 24/7.</p>
+
+<ul>
+<li>Appointment booking</li>
+<li>Calendar integration</li>
+<li>Email reminders</li>
+<li>Online payments</li>
+<li>Customer management</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Membership Websites</h3>
+
+<p>Create exclusive member areas, subscriptions and online learning platforms.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Custom Development</h3>
+
+<p>Need something unique? We build tailored web solutions designed specifically around your business.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Managed Website Hosting</h2>
+
+<p>
+Launching your website is only the beginning. Our managed hosting keeps your website online, secure and performing at its best.
+</p>
+
+<div class="features">
+
+<div class="feature">✓ Australian Optimised Hosting</div>
+<div class="feature">✓ Daily Backups</div>
+<div class="feature">✓ SSL Certificates</div>
+<div class="feature">✓ Malware Protection</div>
+<div class="feature">✓ Security Updates</div>
+<div class="feature">✓ Performance Optimisation</div>
+<div class="feature">✓ Uptime Monitoring</div>
+<div class="feature">✓ Friendly Australian Support</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Our Process</h2>
+
+<div class="steps">
+
+<div class="step">
+<span>1</span>
+<h3>Discover</h3>
+<p>Learn about your business and goals.</p>
+</div>
+
+<div class="step">
+<span>2</span>
+<h3>Design</h3>
+<p>Create a modern website tailored to your brand.</p>
+</div>
+
+<div class="step">
+<span>3</span>
+<h3>Develop</h3>
+<p>Build using modern technologies and best practices.</p>
+</div>
+
+<div class="step">
+<span>4</span>
+<h3>Review</h3>
+<p>Refine the website based on your feedback.</p>
+</div>
+
+<div class="step">
+<span>5</span>
+<h3>Launch</h3>
+<p>Go live with confidence.</p>
+</div>
+
+<div class="step">
+<span>6</span>
+<h3>Support</h3>
+<p>Ongoing updates and assistance whenever required.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>Can I update the website myself?</summary>
+<p>Absolutely. Every website includes an easy-to-use content management system.</p>
+</details>
+
+<details>
+<summary>Do you provide hosting?</summary>
+<p>Yes. We offer secure managed hosting so everything stays under one provider.</p>
+</details>
+
+<details>
+<summary>Can you redesign my existing website?</summary>
+<p>Yes. We regularly modernise existing websites while preserving your branding.</p>
+</details>
+
+<details>
+<summary>Can you build online stores?</summary>
+<p>Yes. From simple shops through to large ecommerce websites with advanced functionality.</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>Ready to Build a Better Website?</h2>
+
+<p>
+Whether you're launching a new business, replacing an outdated website or expanding into ecommerce, DC Media & Entertainment can help you create an online presence that delivers results.
+</p>
+
+<a href="#" class="button">Get Your Free Consultation</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>DC Media & Entertainment</strong></p>
+
+<p>Professional Websites. Secure Hosting. Local Support.</p>
+
+<p>Helping Australian businesses grow online.</p>
+
+</footer>
+
+</body>
+</html>
